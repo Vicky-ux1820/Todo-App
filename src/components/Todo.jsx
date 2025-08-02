@@ -8,8 +8,9 @@ const Todo = () => {
   const add = () => {
     if (inputRef.current.value.trim() === '') {
       alert('Please enter a task');  
+      return;
     }
-    
+
     const newTodo = {
       id: Date.now(),
       title: inputRef.current.value,
